@@ -21,7 +21,7 @@ for(let btn of card_btn)(
         int = int - 20
         document.getElementById("coin").innerText = int;
         if(int === 0){
-            alert("✋you dont have enough coin")
+            alert("❌you dont have enough coin")
             return
         }
         let nw = document.createElement("div")
@@ -47,4 +47,20 @@ for(let love of lv){
     b++
     document.getElementById("spn").textContent = b;
     })
+}
+
+//copy buttton
+let cy = document.getElementsByClassName("cy")
+//console.log(cy)
+for(let copy of cy){
+  copy.addEventListener("click",function(){
+    alert("Do you want to copy")
+    let a = document.getElementById("to").textContent
+    let b = parseInt(a)
+    b++
+    document.getElementById("to").textContent = b;
+    let p2 =copy.parentNode.parentNode.childNodes[7].textContent
+    //console.log(p2)
+    navigator.clipboard.writeText(p2)
+  })
 }
