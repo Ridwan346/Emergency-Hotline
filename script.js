@@ -15,12 +15,15 @@ for(let btn of card_btn)(
        console.log(p1)
        let p2 =btn.parentNode.parentNode.childNodes[7].textContent
        console.log(p2)
-       alert(`${p1}
-        ${p2}`)
+       alert(`📞${p1} ${p2}`)
         let coin= document.getElementById("coin").textContent
         let int = parseInt(coin)
         int = int - 20
         document.getElementById("coin").innerText = int;
+        if(int === 0){
+            alert("✋you dont have enough coin")
+            return
+        }
         let nw = document.createElement("div")
         nw.innerHTML=` <div class="flex justify-between m-4">
             <div><h1 class="font-bold">${p1}</h1>
@@ -33,3 +36,15 @@ for(let btn of card_btn)(
 document.getElementById("clear").addEventListener("click",function(){
     document.getElementById("side").innerText =""
 })
+
+//love icone
+let lv = document.getElementsByClassName("lv");
+console.log(lv)
+for(let love of lv){
+    love.addEventListener("click",function (){
+        let a = document.getElementById("spn").textContent
+    let b = parseInt(a)
+    b++
+    document.getElementById("spn").textContent = b;
+    })
+}
