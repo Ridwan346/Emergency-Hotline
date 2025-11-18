@@ -21,5 +21,12 @@ for(let btn of card_btn)(
         let int = parseInt(coin)
         int = int - 20
         document.getElementById("coin").innerText = int;
+        let nw = document.createElement("div")
+        nw.innerHTML=` <div class="flex justify-between m-4">
+            <div><h1 class="font-bold">${p1}</h1>
+                <p>${p2}</p></div>
+                <h1>${new Date().toLocaleTimeString()}</h1>
+         </div>`
+         document.getElementById("side").appendChild(nw)
     })
 )
