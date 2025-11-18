@@ -30,3 +30,6 @@ for(let btn of card_btn)(
          document.getElementById("side").appendChild(nw)
     })
 )
+document.getElementById("clear").addEventListener("click",function(){
+    document.getElementById("side").innerText =""
+})
